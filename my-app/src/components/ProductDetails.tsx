@@ -1,17 +1,17 @@
 "use client"
 
-import React , {useState} from 'react';
+import React , {useState , useContext} from 'react';
 import Image from 'next/image';
 import {urlFor} from "@/sanity/lib/image";
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-// import { CartContext } from '../context/CartContext';
+import { CartContext } from '@/app/context/CartContext';
 
 
 
 const ProductDetails =({product}:any)=>{
 
     const [index,setIndex] = useState(0);
-    const { cartItems, addProduct, qty, decQty, incQty}:any = useContext(CartContext);
+    const {  qty, decQty, incQty}:any = useContext(CartContext);
     return (
         <>
         <div>{product.name}</div>
@@ -40,7 +40,8 @@ const ProductDetails =({product}:any)=>{
                             className='object-cover h-32 mx-auto border rounded-xl hover:cursor-pointer'
                             onClick={()=>setIndex(i)}
                         />
-                    ))}
+                    ))
+                    }
 
                 </div>
         <div>{product.description}</div>
@@ -72,7 +73,7 @@ const ProductDetails =({product}:any)=>{
                 </div>
 
                 <button className='btn add-to-cart'
-                    onClick={()=>addProduct(product,qty)}
+                    // onClick={()=>addProduct(product,qty)}
                 >
                     Add To Cart
                 </button>
