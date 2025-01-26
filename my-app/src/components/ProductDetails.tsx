@@ -4,14 +4,14 @@ import React , {useState , useContext} from 'react';
 import Image from 'next/image';
 import {urlFor} from "@/sanity/lib/image";
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import { CartContext } from '@/app/context/CartContext';
+// import { CartContext } from '@/app/context/CartContext';
 
 
 
 const ProductDetails =({product}:any)=>{
 
     const [index,setIndex] = useState(0);
-    const {  qty, decQty, incQty}:any = useContext(CartContext);
+    // const {  qty, decQty, incQty}:any = useContext(CartContext);
     return (
         <>
         <div>{product.name}</div>
@@ -58,13 +58,13 @@ const ProductDetails =({product}:any)=>{
                         <h3>Quantity</h3>
                         <p className='quantity-desc flex items-center border-black'>
                             <span className='minus'
-                                onClick={decQty}
+                                // onClick={decQty}
                             >
                                 <AiOutlineMinus />
                             </span>
-                            <span className='num'>{qty}</span>
+                            <span className='num'>1</span>
                             <span className='plus' 
-                                onClick={incQty}
+                                // onClick={incQty}
                             >
                                 <AiOutlinePlus />
                             </span>
