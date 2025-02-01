@@ -18,6 +18,10 @@ export default async function Home() {
   <div>
     
   <Link href="/exactly">Products
+  </Link> <br/> 
+  <Link href="/pages/featureddd">featured products
+  </Link>  <br/> 
+  <Link href="/pages/order">order products
   </Link>  
   
   </div>
