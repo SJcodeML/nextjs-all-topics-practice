@@ -37,7 +37,7 @@ const DataDisplay = ({ products }: { products: Product[]}) => {
                 const imageUrl = product?.image?.asset ? urlFor(product.image.asset).url() : '/path/to/placeholder/image.jpg';  
 
                 return (  
-                    <div key={product._id} className="bg-white h-64 w-48 drop-shadow-lg">  
+                    <div key={product._id} className="bg-white h-80 w-48 drop-shadow-lg">  
                         <Link href={`/pages/product/${product.slug.current}`}> {/* Link to the product detail page */}  
                             <Image  
                                 src={imageUrl}  
@@ -50,7 +50,7 @@ const DataDisplay = ({ products }: { products: Product[]}) => {
                                 <h2 className="text-[#595959] text-lg font-bold">{product.name}</h2>  
                                 <h3 className="text-[#9c9c9c] text-[0.95rem]">${product.price}.00</h3>  
                             </div>  
-                            <button className='h-3 w-7 bg-slate-900 text-white '>add to cart</button>
+                            <button className='h-7 w-24 rounded-md hover:bg-blue-400 bg-slate-900 text-white '>add to cart</button>
                         </Link>  
                     </div>  
                 );  

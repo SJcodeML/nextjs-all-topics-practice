@@ -1,8 +1,11 @@
+"use client"
+
 import Image, { StaticImageData } from "next/image";
 import shoppingcart1 from "../../public/shoopingcart1.png";
 import shoppingcart2 from "../../public/shoppingcart2.png";
 import shoppingcart3 from "../../public/shoppingcart3.png";
 import shoppingcart4 from "../../public/shoppingcart4.png";
+import productdetails2 from "@/app/public/productdetails2.png"
 
 
 export const MyButtonGreen = ({ label }: { label: string }) => {
@@ -112,7 +115,7 @@ export const shoppingcartdata: ShoppingCart[] = [
     }
 ]
 
-export default function ShoppingCart(product:Product) {
+export default function ShoppingCart() {
     return (
         <div className="flex justify-center  mt-20 ">
 
