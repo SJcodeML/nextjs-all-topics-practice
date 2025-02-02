@@ -26,7 +26,9 @@ interface Product {
     };  
   }  
 
-const DataDisplay = ({ products }: { products: Product[]}) => {  
+// const DataDisplay = ({ products }: { products: Product[]}) => {  
+    const DataDisplay = ({ products, onClick }: { products: Product[]; onClick: (product: Product) => void }) => {  
+        
     if (!products || products.length === 0) {  
         return <p>No products available.</p>;  
     }  
@@ -50,8 +52,9 @@ const DataDisplay = ({ products }: { products: Product[]}) => {
                                 <h2 className="text-[#595959] text-lg font-bold">{product.name}</h2>  
                                 <h3 className="text-[#9c9c9c] text-[0.95rem]">${product.price}.00</h3>  
                             </div>  
-                            <button className='h-7 w-24 rounded-md hover:bg-blue-400 bg-slate-900 text-white '>add to cart</button>
-                        </Link>  
+                           
+                        </Link>
+                        <button  onClick={() => onClick(product)} className='h-7 w-24 rounded-md hover:bg-blue-400 bg-slate-900 text-white '>add to cart</button>  
                     </div>  
                 );  
             })}  

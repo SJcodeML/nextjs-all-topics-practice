@@ -5,6 +5,8 @@ import { client} from "@/sanity/lib/client";
 import Link from "next/link";
 
 
+    
+
 
 
 
@@ -13,9 +15,7 @@ import Link from "next/link";
 export default async function Home() {
   // const products = await client.fetch(groq `*[_type=='product']`)
  
-  
-  return (
-  <div>
+ <div>
     
   <Link href="/exactly">Products
   </Link> <br/> 
@@ -24,6 +24,7 @@ export default async function Home() {
   <Link href="/pages/order">order products
   </Link>  
   
+  
   </div>
-  );
+  
 }

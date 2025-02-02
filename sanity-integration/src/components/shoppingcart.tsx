@@ -126,6 +126,8 @@ export default function ShoppingCart() {
                     <h1 className="ml-52"> Price</h1>
                     <h1 className="ml-16"> Quantity</h1>
                     <h1 className="ml-10">Total</h1>
+                    <h1 className="ml-10">Remove</h1>
+                    
 
                 </div>
 
@@ -170,6 +172,9 @@ export default function ShoppingCart() {
                                     <div className="text-[#15245e]">
                                         <span>{`$${item.total.toFixed(2)}`}</span>
                                     </div>
+
+                                    {/* Remove */}
+                                    <div className="text-[#15245e]"> {item.size} </div>
                                 </div>
                             </div>
                         ))}
